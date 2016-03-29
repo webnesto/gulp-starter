@@ -14,7 +14,7 @@ module.exports = function(env) {
     return '.' + extension
   })
 
-  if(config.tasks.ref.enable === true && env === 'production') {
+  if(config.tasks.production.rev.enable === true && env === 'production') {
     var filenamePattern = '[name]-[hash].js'
   }
 
@@ -71,7 +71,7 @@ module.exports = function(env) {
   }
 
   if(env === 'production') {
-    if(config.tasks.ref.enable === true) {
+    if(config.tasks.production.rev.enable === true) {
       webpackConfig.plugins.push(new webpackManifest(publicPath, config.root.dest))
     }
     webpackConfig.plugins.push(
