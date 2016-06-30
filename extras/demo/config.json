@@ -77,6 +77,10 @@
       "src": "icons",
       "dest": "images",
       "extensions": ["svg"]
+    },
+
+    "production" : {
+      "rev": true
     }
   }
 }
